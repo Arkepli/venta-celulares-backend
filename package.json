@@ -1,0 +1,24 @@
+{
+  "name": "venta-celulares-backend",
+  "version": "1.0.0",
+  "description": "Este backend fue desarrollado con **Node.js**, y utiliza una **base de datos NoSQL** (como MongoDB o Firestore) para manejar la información de un negocio dedicado a la **venta de celulares**.",
+  "homepage": "https://github.com/Arkepli/venta-celulares-backend#readme",
+  "bugs": {
+    "url": "https://github.com/Arkepli/venta-celulares-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arkepli/venta-celulares-backend.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.16.0"
+  }
+}
