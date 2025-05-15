@@ -49,6 +49,9 @@ async function handler(req, res) {
     });
     req.on("end", async () => {
       const updatedCelular = JSON.parse(body);
+      if (updatedCelular._id) {
+        delete updatedCelular._id;
+      }
       const result = await collection.updateOne(
         { _id: new ObjectId(id) },
         { $set: updatedCelular }

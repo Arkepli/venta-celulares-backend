@@ -16,6 +16,18 @@ const routes = {
 };
 
 const server = http.createServer((req, res) => {
+  // Habilitar CORS para todas las rutas y métodos
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  if (req.method === "OPTIONS") {
+    res.writeHead(204);
+    res.end();
+    return;
+  }
   const route = Object.keys(routes).find((path) => req.url.startsWith(path));
   if (route) {
     routes[route](req, res);
