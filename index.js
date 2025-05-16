@@ -1,18 +1,18 @@
 const http = require("http");
 const celularesHandler = require("./routes/celulares");
 const ventasHandler = require("./routes/ventas");
-const clientesHandler = require("./routes/clientes");
 const marcasHandler = require("./routes/marcas");
 const proveedoresHandler = require("./routes/proveedores");
-const categoriasHandler = require("./routes/categorias");
+const mantenimientoTecnicoHandler = require("./routes/mantenimiento_tecnico");
+const accesoriosHandler = require("./routes/accesorios");
 
 const routes = {
   "/celulares": celularesHandler,
   "/ventas": ventasHandler,
-  "/clientes": clientesHandler,
   "/marcas": marcasHandler,
   "/proveedores": proveedoresHandler,
-  "/categorias": categoriasHandler,
+  "/mantenimiento-tecnico": mantenimientoTecnicoHandler,
+  "/accesorios": accesoriosHandler,
 };
 
 const server = http.createServer((req, res) => {
