@@ -1,6 +1,6 @@
 const { MongoClient, ObjectId } = require("mongodb");
 
-const uri = "mongodb://localhost:27017";
+const uri = process.env.MONGO_URL;
 const client = new MongoClient(uri);
 const dbName = "venta_celulares";
 const collectionName = "marcas";

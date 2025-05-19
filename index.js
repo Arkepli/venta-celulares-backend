@@ -37,6 +37,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(8002, () => {
+server.listen(8002, '0.0.0.0', () => {
   console.log("Server running on port 8002");
 });

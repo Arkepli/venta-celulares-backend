@@ -1,7 +1,7 @@
 // Cambiar todas las referencias de 'categorias' a 'mantenimiento_tecnico' y la ruta a '/mantenimiento-tecnico'
 const { MongoClient, ObjectId } = require("mongodb");
 
-const uri = "mongodb://localhost:27017";
+const uri = process.env.MONGO_URL;
 const client = new MongoClient(uri);
 const dbName = "venta_celulares";
 const collectionName = "mantenimiento_tecnico";
